@@ -1,4 +1,5 @@
 import Component from "../Component/Component.js";
+import HeaderComponent from "../HeaderComponent/HeaderComponent.js";
 
 class PageComponent extends Component {
   constructor(parentElement: HTMLElement) {
@@ -7,6 +8,8 @@ class PageComponent extends Component {
 
   public render() {
     super.render();
+    const header = new HeaderComponent(this.domElement);
+    header.render();
   }
 }
 

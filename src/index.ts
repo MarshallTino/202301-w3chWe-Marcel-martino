@@ -8,6 +8,3 @@ const url = "https://pokeapi.co/api/v2/pokemon/";
 
 const page = new PageComponent(document.body);
 page.render();
-
-const header = new HeaderComponent(page.domElement);
-header.render();

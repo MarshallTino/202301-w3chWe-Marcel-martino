@@ -8,9 +8,13 @@ class HeaderComponent extends Component {
   public render() {
     super.render();
     this.domElement.innerHTML = `
-    <h1>Pokemon</h1>
-    <img src= "pokemon-logo.svg" alt="pokemon logo" width="135" height="50">
-    
+    <img class="header__image" src= "pokemon-logo.svg" alt="pokemon logo" width="135" height="50">
+    <div class="header__navbar">
+     <ul> 
+	    <li><a href="">Pokemons</a></li> 
+	    <li><a href="">Favourites</a></li> 
+    </ul> 
+    </div>
     `;
   }
 }
