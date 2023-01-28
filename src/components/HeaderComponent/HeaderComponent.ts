@@ -9,12 +9,12 @@ class HeaderComponent extends Component {
     super.render();
     this.domElement.innerHTML = `
     <img class="header__image" src= "pokemon-logo.svg" alt="pokemon logo" width="135" height="50">
-    <div class="header__navbar">
-     <ul> 
+      <div class="header__navbar">
+      <ul> 
 	    <li><a href="">Pokemons</a></li> 
 	    <li><a href="">Favourites</a></li> 
-    </ul> 
-    </div>
+      </ul> 
+      </div>
     `;
   }
 }
