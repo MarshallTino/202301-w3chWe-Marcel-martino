@@ -25,6 +25,6 @@ const pokemonArrayOfObjects = [] as any[];
   const pokeInfoArray = await Promise.all(pokemonInfoList);
 
   pokemonArrayOfObjects.push(...pokeInfoArray);
-})(url, { min: 1, max: 50 });
+})(url, { min: 1, max: 151 });
 
 export default pokemonArrayOfObjects;
