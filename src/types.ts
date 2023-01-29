@@ -17,7 +17,13 @@ export interface PokemonDataStructure {
 }
 
 export interface ComponentStructure {
-  domElement: HTMLElement;
+  domElement: Element;
   render: () => void;
   addListeners?: () => void;
+}
+
+export interface PokemonInfoStructure {
+  name: string;
+  weight: number;
+  image: string;
 }

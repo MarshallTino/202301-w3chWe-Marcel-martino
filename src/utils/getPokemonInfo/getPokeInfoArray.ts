@@ -1,6 +1,6 @@
 import type { PokemonDataStructure } from "../../types";
 
-export const getPokemonInfo = async (url: string, id: number) => {
+const getPokemonInfo = async (url: string, id: number) => {
   const response = await fetch(`${url}${id}`);
   const pokemonInfo = (await response.json()) as PokemonDataStructure;
 
@@ -12,15 +12,19 @@ export const getPokemonInfo = async (url: string, id: number) => {
   return pokeInfo;
 };
 
-export const getAllPokemonInfo = async (
-  url: string,
-  idRange: { min: number; max: number }
-) => {
-  const promises = [];
+const url = "https://pokeapi.co/api/v2/pokemon/";
+const pokemonArrayOfObjects = [] as any[];
+
+(async (url: string, idRange: { min: number; max: number }) => {
+  const pokemonInfoList = [] as any[];
+
   for (let id = idRange.min; id <= idRange.max; id++) {
-    promises.push(getPokemonInfo(url, id));
+    pokemonInfoList.push(getPokemonInfo(url, id));
   }
 
-  const pokeInfoArray = await Promise.all(promises);
-  return pokeInfoArray;
-};
+  const pokeInfoArray = await Promise.all(pokemonInfoList);
+
+  pokemonArrayOfObjects.push(...pokeInfoArray);
+})(url, { min: 1, max: 50 });
+
+export default pokemonArrayOfObjects;

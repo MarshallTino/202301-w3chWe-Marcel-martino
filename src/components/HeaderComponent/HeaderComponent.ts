@@ -1,7 +1,7 @@
 import Component from "../Component/Component.js";
 
 class HeaderComponent extends Component {
-  constructor(parentElement: HTMLElement) {
+  constructor(parentElement: Element) {
     super(parentElement, "page__header", "header");
   }
 
