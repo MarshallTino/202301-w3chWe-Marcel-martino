@@ -20,7 +20,7 @@ class PageComponent extends Component {
         const parentElement = document.querySelector(".card__container");
         new CardComponent(parentElement, pokemon).render();
       });
-    }, 200);
+    }, 500);
   }
 }
 

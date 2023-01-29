@@ -14,8 +14,9 @@ class CardComponent extends Component {
     super.render();
 
     this.domElement.innerHTML = `
-    <h2 class="pokemon__name">${this.pokemon.name}</h2>
-    <img class="pokemon__image" src="${this.pokemon.image}" alt="${this.pokemon.name}">`;
+    <img class="pokemon__image" src="${this.pokemon.image}" alt="${this.pokemon.name}">
+    <h2 class="pokemon name">${this.pokemon.name}</h2>
+    <h2 class="pokemon weight">${this.pokemon.weight} kg</h2>`;
   }
 }
 
