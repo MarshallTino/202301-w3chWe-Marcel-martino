@@ -15,3 +15,15 @@ export interface PokemonDataStructure {
   weight: number;
   sprites: { other: { dream_world: { front_default: string } } };
 }
+
+export interface ComponentStructure {
+  domElement: Element;
+  render: () => void;
+  addListeners?: () => void;
+}
+
+export interface PokemonInfoStructure {
+  name: string;
+  weight: number;
+  image: string;
+}
