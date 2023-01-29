@@ -1,0 +1,41 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik&display=swap");
+
+* {
+  margin: 0px;
+  text-decoration: none;
+  background-color: rgb(241, 241, 241);
+  list-style-type: none;
+}
+
+.page__header {
+  font-family: "Rubik";
+  font-weight: 600;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 80px;
+  margin: 16px;
+  border-radius: 15px;
+  background-color: white;
+}
+
+.header__image {
+  background-color: white;
+  margin: 10px;
+}
+
+.header__navbar {
+  width: 200px;
+}
+
+a {
+  background-color: white;
+  color: blue;
+}
+
+.header__navbar ul {
+  display: flex;
+  padding: 0px;
+  justify-content: space-around;
+  background-color: white;
+}
