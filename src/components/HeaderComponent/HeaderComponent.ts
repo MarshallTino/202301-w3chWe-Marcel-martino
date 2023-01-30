@@ -12,7 +12,7 @@ class HeaderComponent extends Component {
       <div class="header__navbar">
       <ul> 
       <li><a href="">Pokemons</a></li> 
-      <li><a href="">Favourites</a></li> 
+      
       </ul> 
       </div>
     `;

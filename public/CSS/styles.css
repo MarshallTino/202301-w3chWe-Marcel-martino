@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Rubik&display=swap");
-
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@500&display=swap");
 *,
 ::before,
 ::after {
@@ -82,8 +82,39 @@ a {
   font-weight: 200;
   background-color: white;
   font-size: 17px;
-  font-family: "Rubik";
-  color: rgb(255, 203, 5);
-  text-shadow: rgb(12, 37, 160) 1.3px 1.3px 2px;
-  -webkit-font-smoothing: antialiased;
+  font-family: "Noto Sans JP";
+  color: rgb(132, 131, 131);
+}
+
+.detailedPokemon__card {
+  margin: 16px;
+  border-radius: 15px;
+  background-color: white;
+  width: auto;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  font-family: "Noto Sans JP";
+}
+
+.detailed__pokemon__stats {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  margin: 25px;
+}
+
+.detailed__pokemon {
+  background-color: white;
+  color: rgb(82, 82, 82);
+  font-weight: 300;
+}
+
+.detailed__pokemon__image {
+  width: 400px;
+  height: 380px;
+  margin: 20px;
+  background-color: white;
 }

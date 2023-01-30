@@ -2,9 +2,11 @@ import Component from "../Component/Component.js";
 import type { PokemonInfoStructure } from "../../types.js";
 import CardComponent from "../CardComponent/CardComponent.js";
 import pokemonArrayOfObjects from "../../utils/getPokemonInfo/getPokeInfoArray.js";
+import DetailedCardComponent from "../DetailedCardComponent/DetailedCardComponent.js";
 
 class PageComponent extends Component {
   private readonly pokemonsInfoArray;
+
   constructor(parentElement: Element) {
     super(parentElement, "app", "main");
     this.pokemonsInfoArray = pokemonArrayOfObjects as PokemonInfoStructure[];
@@ -20,7 +22,22 @@ class PageComponent extends Component {
         const parentElement = document.querySelector(".card__container");
         new CardComponent(parentElement, pokemon).render();
       });
-    }, 500);
+    }, 750);
+
+    setTimeout(() => {
+      const pokeButtons = document.querySelectorAll(".pokemon__card");
+
+      pokeButtons.forEach((button, position) => {
+        button.addEventListener("click", () => {
+          this.domElement.innerHTML = ``;
+          const detailedCard = new DetailedCardComponent(
+            this.domElement,
+            this.pokemonsInfoArray[position]
+          );
+          detailedCard.render();
+        });
+      });
+    }, 755);
   }
 }
 
