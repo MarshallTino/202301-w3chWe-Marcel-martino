@@ -8,6 +8,9 @@ const getPokemonInfo = async (url: string, id: number) => {
     name: pokemonInfo.name,
     weight: pokemonInfo.weight,
     image: pokemonInfo.sprites.other.dream_world.front_default,
+    height: pokemonInfo.height,
+    baseExperience: pokemonInfo.base_experience,
+    id: pokemonInfo.id,
   };
   return pokeInfo;
 };

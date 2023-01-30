@@ -5,7 +5,7 @@ class CardComponent extends Component {
   private readonly pokemon: PokemonInfoStructure;
 
   constructor(parentElement: Element, pokemon: PokemonInfoStructure) {
-    super(parentElement, "pokemon__card", "li");
+    super(parentElement, "pokemon__card", "button");
     this.pokemon = pokemon;
     this.render();
   }
@@ -16,7 +16,7 @@ class CardComponent extends Component {
     this.domElement.innerHTML = `
     <img class="pokemon__image" src="${this.pokemon.image}" alt="${this.pokemon.name}">
     <h2 class="pokemon name">${this.pokemon.name}</h2>
-    <h2 class="pokemon weight">${this.pokemon.weight} kg</h2>`;
+    <h4 class="pokemon weight">${this.pokemon.id}/151</h4>`;
   }
 }
 
